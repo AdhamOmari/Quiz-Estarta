@@ -1,0 +1,227 @@
+{
+    "categories": [
+        {
+            "name": "Math",
+            "image": "https://www.edutrapedia.com/resources/thumbs/article_photos/Noj7cPv62g-571.jpg_729x410.jpg",
+            "questions": [
+                {
+                    "question": "What is the formula for the area of a rectangle?",
+                    "options": [
+                        "A. length * width",
+                        "B. 2 * (length + width)",
+                        "C. length + width",
+                        "D. length / width"
+                    ],
+                    "answer": "A",
+                    "image": "rectangle.png",
+                    "hint": "The formula involves multiplying two measurements."
+                },
+                {
+                    "question": "What is the Pythagorean theorem?",
+                    "options": [
+                        "A. a^2 + b^2 = c^2",
+                        "B. a^2 + b^2 = 2c^2",
+                        "C. a^2 - b^2 = c^2",
+                        "D. a^2 + b^2 + c^2 = 0"
+                    ],
+                    "answer": "A",
+                    "image": "pythagorean.png",
+                    "hint": "This theorem relates to the sides of a right triangle."
+                },
+                {
+                    "question": "What is the value of pi (π)?",
+                    "options": [
+                        "A. 3.14",
+                        "B. 22/7",
+                        "C. 3.14159",
+                        "D. 3.14159265359"
+                    ],
+                    "answer": "D",
+                    "image": "pi.png",
+                    "hint": "This irrational number is used in geometry."
+                }
+            ]
+        },
+        {
+            "name": "History",
+            "image": "https://islamonline.net/wp-content/uploads/2021/09/%D9%83%D8%AA%D8%A7%D8%A8-%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE-%D9%82%D8%AF%D9%8A%D9%85--489x275.jpg",
+            "questions": [
+                {
+                    "question": "In what year did World War II begin?",
+                    "options": [
+                        "A. 1914",
+                        "B. 1939",
+                        "C. 1945",
+                        "D. 1961"
+                    ],
+                    "answer": "B",
+                    "image": "ww2.png",
+                    "hint": "This war involved many countries and lasted for several years."
+                },
+                {
+                    "question": "Who was the first president of the United States?",
+                    "options": [
+                        "A. John Adams",
+                        "B. George Washington",
+                        "C. Thomas Jefferson",
+                        "D. Abraham Lincoln"
+                    ],
+                    "answer": "B",
+                    "image": "washington.png",
+                    "hint": "He is often called the 'Father of his Country'."
+                },
+                {
+                    "question": "What was the name of the ship that Charles Darwin sailed on during his voyage around the world?",
+                    "options": [
+                        "A. HMS Victory",
+                        "B. HMS Beagle",
+                        "C. HMS Bounty",
+                        "D. HMS Enterprise"
+                    ],
+                    "answer": "B",
+                    "image": "beagle.png",
+                    "hint": "This ship's name was inspired by a breed of dog."
+                }
+            ]
+        },
+        {
+            "name": "Geography",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJorlORuEOi-bZ13qxKZ_5rrMOfjBJYyENHw&usqp=CAU",
+            "questions": [
+                {
+                    "question": "What is the capital of France?",
+                    "options": [
+                        "A. London",
+                        "B. Paris",
+                        "C. Madrid",
+                        "D. Berlin"
+                    ],
+                    "answer": "B",
+                    "hint": "This city is known for its art, fashion, and cuisine."
+                },
+                {
+                    "question": "What is the highest mountain in the world?",
+                    "options": [
+                        "A. Mount Kilimanjaro",
+                        "B. Mount Everest",
+                        "C. Mount McKinley",
+                        "D. Mount Vinson"
+                    ],
+                    "answer": "B",
+                    "hint": "This mountain is located in the Himalayas and is part of the Seven Summits."
+                },
+                {
+                    "question": "Which of the following countries is not in South America?",
+                    "options": [
+                        "A. Brazil",
+                        "B. Argentina",
+                        "C. Colombia",
+                        "D. Nigeria"
+                    ],
+                    "answer": "D",
+                    "hint": "This country is located in West Africa and is known for its oil reserves."
+                }
+            ]
+        },
+        {
+            "name": "Science",
+            "image": "https://img.freepik.com/free-vector/hand-drawn-science-background-theme_23-2148538097.jpg?size=626&ext=jpg",
+            "questions": [
+                {
+                    "question": "What is the smallest unit of life?",
+                    "options": [
+                        "A. Cell",
+                        "B. Molecule",
+                        "C. Atom",
+                        "D. DNA"
+                    ],
+                    "answer": "A",
+                    "hint": "This unit is often called the 'building block of life.'"
+                },
+                {
+                    "question": "What type of energy is stored in an object due to its position or configuration?",
+                    "options": [
+                        "A. Kinetic energy",
+                        "B. Potential energy",
+                        "C. Thermal energy",
+                        "D. Nuclear energy"
+                    ],
+                    "answer": "B",
+                    "hint": "An object at rest has this type of energy, waiting to be released by a force or movement."
+                },
+                {
+                    "question": "What is the process by which plants use sunlight, carbon dioxide, and water to create glucose?",
+                    "options": [
+                        "A. Respiration",
+                        "B. Digestion",
+                        "C. Photosynthesis",
+                        "D. Fermentation"
+                    ],
+                    "answer": "C",
+                    "hint": "This process is responsible for the oxygen we breathe and the food we eat."
+                },
+                {
+                    "question": "What is the unit of electrical resistance?",
+                    "options": [
+                        "A. Ampere",
+                        "B. Ohm",
+                        "C. Watt",
+                        "D. Volt"
+                    ],
+                    "answer": "B",
+                    "hint": "Named after the German physicist Georg Simon Ohm."
+                },
+                {
+                    "question": "Which planet in our solar system has the most moons?",
+                    "options": [
+                        "A. Saturn",
+                        "B. Jupiter",
+                        "C. Neptune",
+                        "D. Uranus"
+                    ],
+                    "answer": "B",
+                    "hint": "This planet has over 79 known moons, including four large ones called the Galilean moons."
+                }
+            ]
+        },
+        {
+            "name": "Fine Art",
+            "image": "https://hawra15.files.wordpress.com/2016/11/img_3451.jpg",
+            "questions": [
+                {
+                    "question": "Which artist painted the famous painting 'The Starry Night'?",
+                    "options": [
+                        "A. Leonardo da Vinci",
+                        "B. Pablo Picasso",
+                        "C. Vincent van Gogh",
+                        "D. Michelangelo"
+                    ],
+                    "answer": "C",
+                    "hint": "This artist is famous for cutting off his own ear."
+                },
+                {
+                    "question": "Which color is not included in the traditional color wheel?",
+                    "options": [
+                        "A. Blue",
+                        "B. Orange",
+                        "C. Red",
+                        "D. Pink"
+                    ],
+                    "answer": "D",
+                    "hint": "This color is often associated with romance and love."
+                },
+                {
+                    "question": "Which painting technique involves applying paint to wet plaster?",
+                    "options": [
+                        "A. Fresco",
+                        "B. Oil",
+                        "C. Watercolor",
+                        "D. Acrylic"
+                    ],
+                    "answer": "A",
+                    "hint": "This technique was commonly used during the Renaissance period."
+                }
+            ]
+        }
+    ]
+}
