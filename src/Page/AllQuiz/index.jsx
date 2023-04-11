@@ -124,15 +124,11 @@ const Quiz = () => {
           <div className={styles.scoreModal}>
             <p className={styles.scoreText}>Your Score: {score}</p>
             <button
-              onClick={handleStartAgainClick}
+              onClick={() => handleStartAgainClick()}
               className={styles.playAgainButton}
             >
               Play Again
             </button>
-            <Link
-              to={`/category/${questionData.name}`}
-              className={styles.backButtonLink}
-            ></Link>
 
             <Link to='/' className={styles.backButton}>
               Back to Category
@@ -141,11 +137,10 @@ const Quiz = () => {
         )}
       </div>
 
-      {!showScoreModal && (
+      {!showScoreModal && !timeIsUp && (
         <Countdown
           date={timer}
           onComplete={handleTimeUp}
-          onStop={handleTimeUp}
           renderer={({ seconds }) => (
             <p className={styles.timerText}>{seconds} 's</p>
           )}

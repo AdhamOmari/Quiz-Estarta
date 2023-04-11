@@ -9,7 +9,28 @@
     height: auto;
     position: absolute;
     top: 107px;
-    left: 4px;
+    left: 85px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .questionContainer {
@@ -104,6 +125,7 @@
 .scoreText {
     font-size: 20px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .playAgainButton {
@@ -139,8 +161,8 @@
     transition: background-color 0.3s ease;
     text-decoration: none;
     position: relative;
-    left: 172px;
-    bottom: 47px;
+    left: 233px;
+    bottom: -3px;
 
 }
 
@@ -151,7 +173,7 @@
 .timeUpModal {
     background-color: #f7f7f7;
     padding: 10px;
-    margin-top: -291px;
+    margin-top: -96px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     width: 32%;
@@ -195,7 +217,7 @@
     overflow: hidden;
     position: relative;
     left: 99%;
-    top: -288px;
+    top: -235px;
 }
 
 
@@ -243,9 +265,10 @@
 }
 
 .button_hint_Wrap {
-    position: relative;
-    bottom: 60px;
-    right: 145px;
+    position: absolute;
+    left: -128px;
+
+
 }
 
 .particles {
