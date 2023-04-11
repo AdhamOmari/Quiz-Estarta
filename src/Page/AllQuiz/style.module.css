@@ -4,7 +4,7 @@
   }
   
   .categoryImage {
-    max-width: 21%;
+    max-width: 24%;
     border-radius: 20%;
     height: auto;
     position: absolute;
@@ -55,6 +55,9 @@
     margin-top: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: relative;
+    left: 581px;
+    bottom: 156px;    
   }
   
   .hintButton:hover {
@@ -65,8 +68,24 @@
     font-style: italic;
     margin-top: 10px;
     margin-bottom: 20px;
+    left: 200px;
+    overflow: hidden;
+    width: 600px;
+    left: 431px;
+    bottom: 120px;
+    bottom: 157px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-start-start-radius: 20%;
+    border-end-end-radius: 30%;
+    padding: 10px;
+    display: none;
+    position: relative;
+
+
   }
-  
+  .hintText:hover{
+    display: block;
+  }
   .scoreModal {
     background-color: #f7f7f7;
     padding: 20px;
@@ -90,6 +109,8 @@
     margin-top: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+
   }
   
   .playAgainButton:hover {
@@ -110,6 +131,11 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    left: 172px;
+    bottom: 47px;
+
   }
   
   .backButton:hover {
@@ -131,22 +157,19 @@
   
   .timerText {
     font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
     text-align: center;
     animation: timerAnimation 1s linear infinite;
-    position: absolute;
-    left: 1185px;
-
     width: 106px;
-    overflow: hidden;
-    bottom: 800px;
-    background-color: #000000; 
-    opacity: 0.7; 
-    color: #FFFFFF; 
+    background-color: #000000;
+    opacity: 0.7;
+    color: #FFFFFF;
     border-radius: 6%;
     z-index: 100;
-    }
+    overflow: hidden;
+    position: absolute;
+    left: 86%;
+    bottom: 38%;
+  }
   
 
   
@@ -164,4 +187,33 @@
     100% {
       transform: scale(1);
     }
+  }
+
+
+  .cardWrap{
+    position: relative;
+    left: 169px;
+    max-width: 702px;
+    width: 506px;
+  }
+
+  .optionItem {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .hintButton:hover + .hintText {
+    display: block;
+  }
+  
+  .hintText {
+    display: none;
+  }  
+
+  .button_hint_Wrap{
+position: relative;
+bottom: 60px;
+    right: 145px;
   }

@@ -27,6 +27,7 @@ const Option = ({ option, answer, handleSelectAnswer }) => {
           className={styles.optionInput}
         />
         <span className={styles.optionText}>{option}</span>
+        <p className={styles.hintTextHidden}>{option.hint}</p>
       </label>
     </li>
   )

@@ -1,5 +1,4 @@
 import React, { useState, useCallback, useRef } from 'react'
-import { useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import enData from '../../../DB/data.json'
 import arData from '../../../DB/dataEnglish.json'
@@ -13,9 +12,7 @@ const Quiz = () => {
   const { language } = useSelector(state => state.languageReducer)
   const { score } = useSelector(state => state.ScoreReducer)
   const { questionData } = useSelector(state => state.SubjectReducer)
-  const showHint = useRef(false)
 
-  const { categoryName } = useParams()
   const data = language === 'ar' ? arData : enData
   const dispatch = useDispatch()
   const [selectedAnswer, setSelectedAnswer] = useState(null)
@@ -23,12 +20,14 @@ const Quiz = () => {
   const [showScoreModal, setShowScoreModal] = useState(false)
   const [timeIsUp, setTimeIsUp] = useState(false)
 
+  const [hintVisible, setHintVisible] = useState(false)
+
+  const handleHintClick = () => {
+    setHintVisible(!hintVisible)
+  }
+
   const handleTimeUp = useCallback(() => {
     setTimeIsUp(true)
-    setShowScoreModal(true)
-  }, [])
-  const handleHintClick = useCallback(() => {
-    showHint.current = !showHint.current
   }, [])
 
   const handleSelectAnswer = option => {
@@ -43,7 +42,10 @@ const Quiz = () => {
       dispatch(incrementScore())
     }
 
-    if (currentQuestionIndex === currentCategory.questions.length - 1) {
+    if (
+      currentQuestionIndex === currentCategory.questions.length - 1 ||
+      timeIsUp
+    ) {
       setShowScoreModal(true)
     } else {
       setCurrentQuestionIndex(currentQuestionIndex + 1)
@@ -58,6 +60,10 @@ const Quiz = () => {
     setTimeIsUp(false)
   }
 
+  const handelBack = () => {
+    nav('/')
+    dispatch(ClearData())
+  }
   const currentCategory = questionData?.[0]
 
   return (
@@ -70,43 +76,45 @@ const Quiz = () => {
             alt={category.name}
           />
 
-          {category.questions?.map(
-            (question, questionIndex) =>
-              questionIndex === currentQuestionIndex && (
-                <div key={questionIndex} className={styles.questionContainer}>
-                  <p className={styles.questionText}>{question.question}</p>
-                  {question.options.map(option => (
-                    <Option
-                      key={option}
-                      option={option}
-                      question={question}
-                      selectedAnswer={selectedAnswer}
-                      handleSelectAnswer={handleSelectAnswer}
-                      className={styles.option}
-                    />
-                  ))}
-                  <button
-                    disabled={!selectedAnswer}
-                    onClick={handleNextQuestionClick}
-                    className={styles.nextButton}
-                  >
-                    {currentQuestionIndex ===
-                    currentCategory.questions.length - 1
-                      ? 'Finish'
-                      : 'Next'}
-                  </button>
-                  <button
-                    onClick={handleHintClick}
-                    className={styles.hintButton}
-                  >
-                    Hint
-                  </button>
-                  {showHint.current && (
-                    <p className={styles.hintText}>{question.hint}</p>
-                  )}
-                </div>
-              )
-          )}
+          <div className={styles.cardWrap}>
+            {category.questions?.map(
+              (question, questionIndex) =>
+                questionIndex === currentQuestionIndex && (
+                  <div key={questionIndex} className={styles.questionContainer}>
+                    <p className={styles.questionText}>{question.question}</p>
+                    {question.options.map(option => (
+                      <Option
+                        key={option}
+                        option={option}
+                        question={question}
+                        selectedAnswer={selectedAnswer}
+                        handleSelectAnswer={handleSelectAnswer}
+                        className={styles.option}
+                      />
+                    ))}
+                    <button
+                      disabled={!selectedAnswer}
+                      onClick={handleNextQuestionClick}
+                      className={styles.nextButton}
+                    >
+                      {currentQuestionIndex ===
+                      currentCategory.questions.length - 1
+                        ? 'Finish'
+                        : 'Next'}
+                    </button>
+                    <div className={styles.button_hint_Wrap}>
+                      <button
+                        onClick={handleHintClick}
+                        className={styles.hintButton}
+                      >
+                        Hint
+                      </button>
+                      <p className={styles.hintText}>{question.hint}</p>
+                    </div>
+                  </div>
+                )
+            )}
+          </div>
         </div>
       ))}
       {showScoreModal && (
@@ -122,12 +130,13 @@ const Quiz = () => {
             to={`/category/${questionData.name}`}
             className={styles.backButtonLink}
           ></Link>
-          <button className={styles.backButton}>
-            <Link to='/'>Back to Category</Link>
-          </button>
+
+          <Link to='/' className={styles.backButton}>
+            Back to Category
+          </Link>
         </div>
       )}
-      {showScoreModal && (
+      {!showScoreModal && (
         <Countdown
           date={Date.now() + 30000}
           onComplete={handleTimeUp}
@@ -150,9 +159,9 @@ const Quiz = () => {
             to={`/category/${questionData.name}`}
             className={styles.backButtonLink}
           ></Link>
-          <button className={styles.backButton}>
-            <Link to='/'>Back to Category</Link>
-          </button>
+          <Link to='/' className={styles.backButton}>
+            Back to Category
+          </Link>
         </div>
       )}
     </div>
