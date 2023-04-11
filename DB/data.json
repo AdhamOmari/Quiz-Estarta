@@ -13,7 +13,6 @@
                         "D length / width"
                     ],
                     "answer": "A",
-                    "image": "rectangle.png",
                     "hint": "The formula involves multiplying two measurements."
                 },
                 {
@@ -25,7 +24,6 @@
                         "D a^2 + b^2 + c^2 = 0"
                     ],
                     "answer": "A",
-                    "image": "pythagorean.png",
                     "hint": "This theorem relates to the sides of a right triangle."
                 },
                 {
@@ -37,8 +35,84 @@
                         "D 3.14159265359"
                     ],
                     "answer": "D",
-                    "image": "pi.png",
                     "hint": "This irrational number is used in geometry."
+                },
+                {
+                    "question": "What is the formula for the volume of a sphere?",
+                    "options": [
+                        "A (4/3)πr^3",
+                        "B 4πr^2",
+                        "C (1/3)πr^2h",
+                        "D πr^2"
+                    ],
+                    "answer": "A",
+                    "hint": "This formula involves the radius of the sphere."
+                },
+                {
+                    "question": "What is the equation for a line in slope-intercept form?",
+                    "options": [
+                        "A y = mx + b",
+                        "B x = my + b",
+                        "C y = mx - b",
+                        "D x = my - b"
+                    ],
+                    "answer": "A",
+                    "hint": "This form includes the slope and y-intercept of the line."
+                },
+                {
+                    "question": "What is the formula for the area of a triangle?",
+                    "options": [
+                        "A (1/2)bh",
+                        "B l*w",
+                        "C πr^2",
+                        "D bh"
+                    ],
+                    "answer": "A",
+                    "hint": "This formula involves the base and height of the triangle."
+                },
+                {
+                    "question": "What is the quadratic formula?",
+                    "options": [
+                        "A (-b ± √(b^2 - 4ac)) / 2a",
+                        "B (a + b)^2 = a^2 + 2ab + b^2",
+                        "C a^2 + b^2 = c^2",
+                        "D a/b = c/d"
+                    ],
+                    "answer": "A",
+                    "hint": "This formula is used to solve quadratic equations."
+                },
+                {
+                    "question": "What is the formula for the slope of a line?",
+                    "options": [
+                        "A (y2 - y1) / (x2 - x1)",
+                        "B (x2 - x1) / (y2 - y1)",
+                        "C (y1 - y2) / (x1 - x2)",
+                        "D (x1 - x2) / (y1 - y2)"
+                    ],
+                    "answer": "A",
+                    "hint": "This formula measures the steepness of a line."
+                },
+                {
+                    "question": "What is the formula for the perimeter of a rectangle?",
+                    "options": [
+                        "A 2(length + width)",
+                        "B length * width",
+                        "C length + width",
+                        "D length / width"
+                    ],
+                    "answer": "A",
+                    "hint": "This formula involves adding the four sides of a rectangle."
+                },
+                {
+                    "question": "What is the formula for the volume of a cylinder?",
+                    "options": [
+                        "A πr^2h",
+                        "B 2πr",
+                        "C (4/3)πr^3",
+                        "D (1/2)πr^2h"
+                    ],
+                    "answer": "A",
+                    "hint": "This formula involves the radius and height of the cylinder."
                 }
             ]
         },
@@ -55,7 +129,6 @@
                         "D 1961"
                     ],
                     "answer": "B",
-                    "image": "ww2.png",
                     "hint": "This war involved many countries and lasted for several years."
                 },
                 {
@@ -67,7 +140,6 @@
                         "D Abraham Lincoln"
                     ],
                     "answer": "B",
-                    "image": "washington.png",
                     "hint": "He is often called the 'Father of his Country'."
                 },
                 {
@@ -79,8 +151,84 @@
                         "D HMS Enterprise"
                     ],
                     "answer": "B",
-                    "image": "beagle.png",
                     "hint": "This ship's name was inspired by a breed of dog."
+                },
+                {
+                    "question": "What is the largest planet in our solar system?",
+                    "options": [
+                        "A Jupiter",
+                        "B Saturn",
+                        "C Earth",
+                        "D Mars"
+                    ],
+                    "answer": "A",
+                    "hint": "This gas giant has at least 79 moons."
+                },
+                {
+                    "question": "Who is the author of the Harry Potter series?",
+                    "options": [
+                        "A J.K. Rowling",
+                        "B Stephen King",
+                        "C George R.R. Martin",
+                        "D Dan Brown"
+                    ],
+                    "answer": "A",
+                    "hint": "This author's first name is Joanne."
+                },
+                {
+                    "question": "What is the capital of Japan?",
+                    "options": [
+                        "A Tokyo",
+                        "B Beijing",
+                        "C Seoul",
+                        "D Taipei"
+                    ],
+                    "answer": "A",
+                    "hint": "This city hosted the 1964 Summer Olympics."
+                },
+                {
+                    "question": "What is the largest organ in the human body?",
+                    "options": [
+                        "A Liver",
+                        "B Heart",
+                        "C Brain",
+                        "D Skin"
+                    ],
+                    "answer": "D",
+                    "hint": "This organ covers the entire body and protects it from external damage."
+                },
+                {
+                    "question": "Which famous scientist formulated the theory of relativity?",
+                    "options": [
+                        "A Isaac Newton",
+                        "B Albert Einstein",
+                        "C Galileo Galilei",
+                        "D Johannes Kepler"
+                    ],
+                    "answer": "B",
+                    "hint": "This scientist is often regarded as the father of modern physics."
+                },
+                {
+                    "question": "What is the capital of Australia?",
+                    "options": [
+                        "A Sydney",
+                        "B Perth",
+                        "C Canberra",
+                        "D Melbourne"
+                    ],
+                    "answer": "C",
+                    "hint": "This city was specifically built to be the capital of Australia."
+                },
+                {
+                    "question": "Who painted the famous artwork 'The Mona Lisa'?",
+                    "options": [
+                        "A Vincent van Gogh",
+                        "B Leonardo da Vinci",
+                        "C Pablo Picasso",
+                        "D Michelangelo"
+                    ],
+                    "answer": "B",
+                    "hint": "This artist was a famous inventor, scientist, and mathematician as well."
                 }
             ]
         },
@@ -120,6 +268,72 @@
                     ],
                     "answer": "D",
                     "hint": "This country is located in West Africa and is known for its oil reserves."
+                },
+                {
+                    "question": "What is the smallest country in the world by land area?",
+                    "options": [
+                        "A Monaco",
+                        "B Liechtenstein",
+                        "C San Marino",
+                        "D Vatican City"
+                    ],
+                    "answer": "D",
+                    "hint": "This country is surrounded by the city of Rome and is the headquarters of the Catholic Church."
+                },
+                {
+                    "question": "What is the largest country in the world by land area?",
+                    "options": [
+                        "A Russia",
+                        "B Canada",
+                        "C China",
+                        "D United States"
+                    ],
+                    "answer": "A",
+                    "hint": "This country spans 11 time zones and has a population of over 144 million people."
+                },
+                {
+                    "question": "What is the currency of Japan?",
+                    "options": [
+                        "A Yen",
+                        "B Euro",
+                        "C Dollar",
+                        "D Pound"
+                    ],
+                    "answer": "A",
+                    "hint": "This currency has been in circulation in Japan since the 1870s."
+                },
+                {
+                    "question": "Who wrote the Harry Potter book series?",
+                    "options": [
+                        "A J.K. Rowling",
+                        "B Stephenie Meyer",
+                        "C Suzanne Collins",
+                        "D George R.R. Martin"
+                    ],
+                    "answer": "A",
+                    "hint": "This author is one of the best-selling authors of all time."
+                },
+                {
+                    "question": "What is the most widely spoken language in the world?",
+                    "options": [
+                        "A English",
+                        "B Spanish",
+                        "C Mandarin",
+                        "D Arabic"
+                    ],
+                    "answer": "C",
+                    "hint": "Over one billion people speak this language as their first language."
+                },
+                {
+                    "question": "What is the largest organ in the human body?",
+                    "options": [
+                        "A Brain",
+                        "B Liver",
+                        "C Heart",
+                        "D Skin"
+                    ],
+                    "answer": "D",
+                    "hint": "This organ covers the entire body and has a surface area of around 20 square feet."
                 }
             ]
         },
@@ -128,59 +342,81 @@
             "image": "https://img.freepik.com/free-vector/hand-drawn-science-background-theme_23-2148538097.jpg?size=626&ext=jpg",
             "questions": [
                 {
-                    "question": "What is the smallest unit of life?",
+                    "question": "What is the chemical symbol for gold?",
                     "options": [
-                        "A Cell",
-                        "B Molecule",
-                        "C Atom",
-                        "D DNA"
+                        "A Ag",
+                        "B Au",
+                        "C Cu",
+                        "D Fe"
+                    ],
+                    "answer": "B",
+                    "hint": "This element is known for its luster and is often used in jewelry and currency."
+                },
+                {
+                    "question": "What is the largest organ in the human body?",
+                    "options": [
+                        "A Liver",
+                        "B Heart",
+                        "C Brain",
+                        "D Skin"
+                    ],
+                    "answer": "D",
+                    "hint": "This organ helps to protect the body from external factors and regulates temperature."
+                },
+                {
+                    "question": "What is the process by which water changes from a liquid to a gas?",
+                    "options": [
+                        "A Melting",
+                        "B Boiling",
+                        "C Condensation",
+                        "D Freezing"
+                    ],
+                    "answer": "B",
+                    "hint": "This process is often used to purify water and create steam."
+                },
+                {
+                    "question": "What is the SI unit of pressure?",
+                    "options": [
+                        "A Pascal",
+                        "B Newton",
+                        "C Joule",
+                        "D Hertz"
                     ],
                     "answer": "A",
-                    "hint": "This unit is often called the 'building block of life.'"
+                    "hint": "Named after the French mathematician and physicist Blaise Pascal."
                 },
                 {
-                    "question": "What type of energy is stored in an object due to its position or configuration?",
+                    "question": "What is the largest country in the world by land area?",
                     "options": [
-                        "A Kinetic energy",
-                        "B Potential energy",
-                        "C Thermal energy",
-                        "D Nuclear energy"
-                    ],
-                    "answer": "B",
-                    "hint": "An object at rest has this type of energy, waiting to be released by a force or movement."
-                },
-                {
-                    "question": "What is the process by which plants use sunlight, carbon dioxide, and water to create glucose?",
-                    "options": [
-                        "A Respiration",
-                        "B Digestion",
-                        "C Photosynthesis",
-                        "D Fermentation"
+                        "A China",
+                        "B United States",
+                        "C Russia",
+                        "D Canada"
                     ],
                     "answer": "C",
-                    "hint": "This process is responsible for the oxygen we breathe and the food we eat"
+                    "hint": "This country spans over two continents and has 11 time zones."
                 },
                 {
-                    "question": "What is the unit of electrical resistance?",
+                    "question": "What is the process by which a solid changes directly into a gas?",
                     "options": [
-                        "A Ampere",
-                        "B Ohm",
-                        "C Watt",
-                        "D Volt"
+                        "A Melting",
+                        "B Boiling",
+                        "C Sublimation",
+                        "D Freezing"
                     ],
-                    "answer": "B",
-                    "hint": "Named after the German physicist Georg Simon Ohm"
+                    "answer": "C",
+                    "hint": "This process is used to make freeze-dried foods and air fresheners."
                 },
                 {
-                    "question": "Which planet in our solar system has the most moons?",
+                    "question": "Which planet in our solar system has the longest day?",
                     "options": [
-                        "A Saturn",
-                        "B Jupiter",
-                        "C Neptune",
-                        "D Uranus"
+                        "A Jupiter",
+                        "B Venus",
+                        "C Saturn",
+                        "D Mercury"
                     ],
                     "answer": "B",
-                    "hint": "This planet has over 79 known moons, including four large ones called the Galilean moons"
+                    "hint": "This planet has a day that is longer than its year and rotates in the opposite direction of most other planets."
                 }
             ]
         },
@@ -189,37 +425,81 @@
             "image": "https://hawra15.files.wordpress.com/2016/11/img_3451.jpg",
             "questions": [
                 {
-                    "question": "Which artist painted the famous painting 'The Starry Night'?",
+                    "question": "Which famous playwright wrote 'Hamlet', 'Macbeth', and 'Romeo and Juliet'?",
                     "options": [
-                        "A Leonardo da Vinci",
-                        "B Pablo Picasso",
-                        "C Vincent van Gogh",
-                        "D Michelangelo"
-                    ],
-                    "answer": "C",
-                    "hint": "This artist is famous for cutting off his own ear."
-                },
-                {
-                    "question": "Which color is not included in the traditional color wheel?",
-                    "options": [
-                        "A Blue",
-                        "B Orange",
-                        "C Red",
-                        "D Pink"
-                    ],
-                    "answer": "D",
-                    "hint": "This color is often associated with romance and love."
-                },
-                {
-                    "question": "Which painting technique involves applying paint to wet plaster?",
-                    "options": [
-                        "A Fresco",
-                        "B Oil",
-                        "C Watercolor",
-                        "D Acrylic"
+                        "A William Shakespeare",
+                        "B Oscar Wilde",
+                        "C Tennessee Williams",
+                        "D Samuel Beckett"
                     ],
                     "answer": "A",
-                    "hint": "This technique was commonly used during the Renaissance period"
+                    "hint": "This playwright is often referred to as the Bard of Avon."
+                },
+                {
+                    "question": "What is the name of the French artist who created 'Les Demoiselles d'Avignon' and co-founded the Cubist movement?",
+                    "options": [
+                        "A Claude Monet",
+                        "B Edgar Degas",
+                        "C Henri Matisse",
+                        "D Pablo Picasso"
+                    ],
+                    "answer": "D",
+                    "hint": "This artist was born in Malaga, Spain."
+                },
+                {
+                    "question": "What is the name of the Italian artist who painted 'The Birth of Venus' and 'Primavera'?",
+                    "options": [
+                        "A Leonardo da Vinci",
+                        "B Sandro Botticelli",
+                        "C Michelangelo",
+                        "D Titian"
+                    ],
+                    "answer": "B",
+                    "hint": "This artist was part of the Italian Renaissance movement."
+                },
+                {
+                    "question": "What is the name of the famous sculpture created by Michelangelo that depicts a biblical hero?",
+                    "options": [
+                        "A The Pieta",
+                        "B David",
+                        "C The Sistine Chapel",
+                        "D The Last Judgment"
+                    ],
+                    "answer": "B",
+                    "hint": "This sculpture is located in Florence, Italy."
+                },
+                {
+                    "question": "What is the name of the famous opera written by Giuseppe Verdi that is set in ancient Egypt?",
+                    "options": [
+                        "A The Magic Flute",
+                        "B The Marriage of Figaro",
+                        "C La traviata",
+                        "D Aida"
+                    ],
+                    "answer": "D",
+                    "hint": "This opera premiered in Cairo in 1871."
+                },
+                {
+                    "question": "Which famous composer wrote 'Symphony No. 5', 'Moonlight Sonata', and 'Fur Elise'?",
+                    "options": [
+                        "A Ludwig van Beethoven",
+                        "B Wolfgang Amadeus Mozart",
+                        "C Johann Sebastian Bach",
+                        "D Franz Schubert"
+                    ],
+                    "answer": "A",
+                    "hint": "This composer was born in Bonn, Germany in 1770."
+                },
+                {
+                    "question": "What is the name of the famous ballet created by Pyotr Ilyich Tchaikovsky that features a magical Christmas gift and a prince?",
+                    "options": [
+                        "A The Nutcracker",
+                        "B Swan Lake",
+                        "C Giselle",
+                        "D Sleeping Beauty"
+                    ],
+                    "answer": "A",
+                    "hint": "This ballet premiered in 1892 in St. Petersburg, Russia."
                 }
             ]
         }

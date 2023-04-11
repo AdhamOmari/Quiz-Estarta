@@ -12,15 +12,14 @@ import Countdown from 'react-countdown'
 const Quiz = () => {
   const { language } = useSelector(state => state.languageReducer)
   const { score } = useSelector(state => state.ScoreReducer)
+  const { questionData } = useSelector(state => state.SubjectReducer)
+  const showHint = useRef(false)
+
   const { categoryName } = useParams()
   const data = language === 'ar' ? arData : enData
   const dispatch = useDispatch()
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-
-  // add useRef to prevent the rerender for the all componant state
-  const showHint = useRef(false)
-
   const [showScoreModal, setShowScoreModal] = useState(false)
   const [timeIsUp, setTimeIsUp] = useState(false)
 
@@ -40,9 +39,8 @@ const Quiz = () => {
     const currentQuestion =
       currentCategory.questions[currentQuestionIndex].answer
 
-    if (selectedAnswer.charAt(0) === currentQuestion) {
+    if (selectedAnswer && selectedAnswer.charAt(0) === currentQuestion) {
       dispatch(incrementScore())
-    } else {
     }
 
     if (currentQuestionIndex === currentCategory.questions.length - 1) {
@@ -52,7 +50,6 @@ const Quiz = () => {
       setSelectedAnswer(null)
     }
   }
-
   const handleStartAgainClick = () => {
     setSelectedAnswer(null)
     setCurrentQuestionIndex(0)
@@ -61,72 +58,102 @@ const Quiz = () => {
     setTimeIsUp(false)
   }
 
-  const currentCategory = data.categories.find(
-    category => category.name === categoryName
-  )
-  const currentQuestion = currentCategory?.questions[currentQuestionIndex]
+  const currentCategory = questionData?.[0]
 
   return (
     <div className={styles.quizContainer}>
-      <h2 className={styles.categoryTitle}>{categoryName}</h2>
-      <div className={styles.countdownContainer}>
-        {timeIsUp ? (
-          <p className={styles.timeUpText}>Time's up!</p>
-        ) : (
-          <Countdown
-            date={Date.now() + 5000}
-            onComplete={handleTimeUp}
-            renderer={({ seconds }) => (
-              <span className={styles.countdownText}>{seconds}</span>
-            )}
+      {questionData?.map((category, categoryIndex) => (
+        <div key={categoryIndex}>
+          <img
+            className={styles.categoryImage}
+            src={category.image}
+            alt={category.name}
           />
-        )}
-      </div>
-      {showScoreModal ? (
-        <div className={styles.scoreContainer}>
-          <h3 className={styles.scoreTitle}>Your Score:</h3>
-          <p className={styles.scoreText}>{score}</p>
+
+          {category.questions?.map(
+            (question, questionIndex) =>
+              questionIndex === currentQuestionIndex && (
+                <div key={questionIndex} className={styles.questionContainer}>
+                  <p className={styles.questionText}>{question.question}</p>
+                  {question.options.map(option => (
+                    <Option
+                      key={option}
+                      option={option}
+                      question={question}
+                      selectedAnswer={selectedAnswer}
+                      handleSelectAnswer={handleSelectAnswer}
+                      className={styles.option}
+                    />
+                  ))}
+                  <button
+                    disabled={!selectedAnswer}
+                    onClick={handleNextQuestionClick}
+                    className={styles.nextButton}
+                  >
+                    {currentQuestionIndex ===
+                    currentCategory.questions.length - 1
+                      ? 'Finish'
+                      : 'Next'}
+                  </button>
+                  <button
+                    onClick={handleHintClick}
+                    className={styles.hintButton}
+                  >
+                    Hint
+                  </button>
+                  {showHint.current && (
+                    <p className={styles.hintText}>{question.hint}</p>
+                  )}
+                </div>
+              )
+          )}
+        </div>
+      ))}
+      {showScoreModal && (
+        <div className={styles.scoreModal}>
+          <p className={styles.scoreText}>Your Score: {score}</p>
           <button
             onClick={handleStartAgainClick}
-            className={styles.restartButton}
+            className={styles.playAgainButton}
           >
-            Start Again
+            Play Again
           </button>
-          <Link to='/' className={styles.gohomeButtonLink}>
-            <button className={styles.homeButton}>Go to Home</button>
-          </Link>
+          <Link
+            to={`/category/${questionData.name}`}
+            className={styles.backButtonLink}
+          ></Link>
+          <button className={styles.backButton}>
+            <Link to='/'>Back to Category</Link>
+          </button>
         </div>
-      ) : currentQuestion ? (
-        <div key={currentQuestion.id} className={styles.questionContainer}>
-          <div className={styles.hintContainer}>
-            <button onClick={handleHintClick} className={styles.hintButton}>
-              Hint
-            </button>
-            {showHint && (
-              <p className={styles.hintText}>{currentQuestion.hint}</p>
-            )}
-          </div>
-          <h3 className={styles.questionTitle}>{currentQuestion.question}</h3>
-          <ul className={styles.optionsList}>
-            {currentQuestion.options.map(option => (
-              <Option
-                key={option}
-                option={option}
-                selectedAnswer={selectedAnswer}
-                answer={currentQuestion.answer}
-                handleSelectAnswer={handleSelectAnswer}
-              />
-            ))}
-          </ul>
+      )}
+      {showScoreModal && (
+        <Countdown
+          date={Date.now() + 30000}
+          onComplete={handleTimeUp}
+          renderer={({ seconds }) => (
+            <p className={styles.timerText}>{seconds} 's</p>
+          )}
+        />
+      )}
+      {timeIsUp && (
+        <div className={styles.timeUpModal}>
+          <p className={styles.timeUpText}>Time is up!</p>
+          <p className={styles.scoreText}>Your Score: {score}</p>
           <button
-            onClick={handleNextQuestionClick}
-            className={styles.nextButton}
+            onClick={handleStartAgainClick}
+            className={styles.playAgainButton}
           >
-            Next
+            Play Again
+          </button>
+          <Link
+            to={`/category/${questionData.name}`}
+            className={styles.backButtonLink}
+          ></Link>
+          <button className={styles.backButton}>
+            <Link to='/'>Back to Category</Link>
           </button>
         </div>
-      ) : (
-        <div className={styles.scoreContainer}></div>
       )}
     </div>
   )

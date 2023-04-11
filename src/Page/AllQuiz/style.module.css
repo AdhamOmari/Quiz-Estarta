@@ -1,327 +1,167 @@
 .quizContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.categoryTitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    animation: fade-in 1s ease-in-out;
-}
-
-.questionContainer {
-    width: 60%;
-    margin: 2rem 0;
-    padding: 2rem;
-    border: 2px solid #ccc;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .categoryImage {
+    max-width: 21%;
+    border-radius: 20%;
+    height: auto;
+    position: absolute;
+    top: 107px;
+    left: 4px;
+  }
+  
+  .questionContainer {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    animation: slide-in 1s ease-in-out;
-}
-
-.questionTitle {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.optionsList {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.optionItem {
-    margin: 1rem 0;
-    animation: fade-in 1s ease-in-out;
-}
-
-.optionLabel {
-    display: flex;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
-.optionInput {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.checkmark {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: #fff;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-}
-
-.optionLabel:hover .checkmark {
-    border-color: #000;
-}
-
-.optionInput:checked~.checkmark {
-    background-color: #000;
-    border-color: #000;
-}
-
-.optionText {
-    margin-left: 2rem;
-}
-
-@keyframes slide-in {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.hintButton {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: 'Arial Narrow Bold', sans-serif;
-    background-color: #5a5858;
-    cursor: pointer;
-    transition: border-color 0.25s;
-    color: #f5f5f5;
-    position: relative;
-    left: 90%;
-}
-
-.hideHint {
-    display: none;
-}
-
-.hintButton:hover {
-    transform: scale(1.1);
-    background-color: #333;
-    color: #f5f5f5;
-}
-
-.hintText {
-    position: relative;
-    top: -20px;
-    left: 50%;
-    background-color: rgba(255, 0, 0, 0.8);
-    ;
-    color: #f5f5f5;
-    border-radius: 5px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-    width: 400px;
-    font-size: 22px;
-    text-align: center;
-}
-
-.hintButton:hover+.hintText {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.hintContinuer {
-    position: relative;
-    top: 17px;
-    left: 250px;
-}
-
-.scoreContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-}
-
-.scoreTitle {
-    font-size: 24px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: questionAnimation 1s linear infinite;
+  }
+  
+  .questionText {
+    font-size: 20px;
     margin-bottom: 10px;
-    text-align: center;
-}
-
-.scoreText {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.restartButton {
-    background-color: #5a5858;
-    color: #fff;
+  }
+  
+  .option {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .nextButton {
+    background-color: #4CAF50;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    margin-top: 20px;
     cursor: pointer;
-}
-
-.restartButton:hover {
-    background-color: #388e3c;
-}
-
-
-.optionItem {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 10px 0;
-    cursor: pointer;
-}
-
-.optionLabel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-}
-
-.optionInput {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.optionText {
-    font-size: 16px;
-    color: #555;
-    margin-left: 67px;
-}
-
-.optionLabel::before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #555;
-    border-radius: 50%;
-    margin-right: 10px;
-    position: absolute;
-    left: 0;
-}
-
-.optionInput:checked+.optionText::before {
-    content: "";
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: #555;
-    border-radius: 50%;
-    position: absolute;
-    left: 4px;
-    top: 4px;
-}
-
-.nextButton {
-    position: relative;
-    left: 40%;
-    background-color: #808280;
-    /* Green */
-    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nextButton:hover {
+    background-color: #2E8B57;
+  }
+  
+  .hintButton {
+    background-color: #f44336;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
     cursor: pointer;
-    transition: transform 0.2s ease-out;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  .hintButton:hover {
+    background-color: #c62828;
+  }
+  
+  .hintText {
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .scoreModal {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 
-.nextButton:hover {
-    transform: translateX(5px);
-
-}
-
-.homeButton {
+  }
+  
+  .scoreText {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .playAgainButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .playAgainButton:hover {
+    background-color: #2E8B57;
+  }
+  
+  .backButtonLink {
     display: block;
     margin-top: 20px;
+    text-align: center;
+  }
+  
+  .backButton {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .backButton:hover {
+    background-color: #c62828;
+  }
+  
+  .timeUpModal {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeUpText {
     font-size: 20px;
-    color: #101010;
-    text-decoration: none !important;
-    transition: color 0.3s ease-in-out;
+    margin-bottom: 10px;
+  }
+  
+  .timerText {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    animation: timerAnimation 1s linear infinite;
+    position: absolute;
+    left: 1185px;
 
-    background-color: #555;
-}
-
-
-
-.homeButton:hover {
-    color: #f5f5f5;
-
-}
-
-.gohomeButtonLink {
-    text-decoration: none;
-
-}
-
-.countdownContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff;
-}
-
-.timeUpText {
-    font-size: 2rem;
-    color: rgb(35, 195, 187);
-    animation: countdown 5s linear forwards;
-
-}
-
-.countdownText {
-    font-size: 2rem;
-    color: rgb(7, 7, 7);
-    transition: font-size 1s ease-in-out, color 1s ease-in-out;
-}
-
-.countdownText {
-    font-size: 3rem;
-    color: rgb(255, 4, 0);
-}
-
-@keyframes countdown {
-    from {
-        transform: scale(1);
+    width: 106px;
+    overflow: hidden;
+    bottom: 800px;
+    background-color: #000000; 
+    opacity: 0.7; 
+    color: #FFFFFF; 
+    border-radius: 6%;
+    z-index: 100;
     }
+  
 
-    to {
-        transform: scale(1.5);
-        opacity: 0;
+  
+
+  
+
+  
+  @keyframes timerAnimation {
+    0% {
+      transform: scale(1);
     }
-}
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
