@@ -25,7 +25,7 @@ const Quiz = () => {
 
   const handleTimeUp = useCallback(() => {
     setTimeIsUp(true)
-  }, [])
+  }, [timeIsUp])
 
   const handleSelectAnswer = option => {
     setSelectedAnswer(option)
@@ -50,11 +50,11 @@ const Quiz = () => {
     }
   }
   const handleStartAgainClick = () => {
+    setTimeIsUp(false)
     setSelectedAnswer(null)
     setCurrentQuestionIndex(0)
     setShowScoreModal(false)
     dispatch(RemoveData())
-    setTimeIsUp(false)
   }
 
   const currentCategory = questionData?.[0]
@@ -89,16 +89,18 @@ const Quiz = () => {
                           className={styles.option}
                         />
                       ))}
-                      <button
-                        disabled={!selectedAnswer}
-                        onClick={handleNextQuestionClick}
-                        className={styles.nextButton}
-                      >
-                        {currentQuestionIndex ===
-                        currentCategory.questions.length - 1
-                          ? 'Finish'
-                          : 'Next'}
-                      </button>
+                      {!timeIsUp && (
+                        <button
+                          disabled={!selectedAnswer || timeIsUp}
+                          onClick={handleNextQuestionClick}
+                          className={styles.nextButton}
+                        >
+                          {currentQuestionIndex ===
+                          currentCategory.questions.length - 1
+                            ? 'Finish'
+                            : 'Next'}
+                        </button>
+                      )}
                       <div className={styles.button_hint_Wrap}>
                         <button
                           onClick={handleHintClick}
@@ -156,10 +158,6 @@ const Quiz = () => {
           >
             Play Again
           </button>
-          <Link
-            to={`/category/${questionData.name}`}
-            className={styles.backButtonLink}
-          ></Link>
         </div>
       )}
     </div>
