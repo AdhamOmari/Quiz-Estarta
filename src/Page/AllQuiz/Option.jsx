@@ -26,8 +26,7 @@ const Option = ({ option, answer, handleSelectAnswer }) => {
           onChange={() => handleOptionSelect(option)}
           className={styles.optionInput}
         />
-        <span className={styles.optionText}>{option}</span>
-        <p className={styles.hintTextHidden}>{option.hint}</p>
+        <span className={styles.optionText}>{option.substring(1)}</span>
       </label>
     </li>
   )

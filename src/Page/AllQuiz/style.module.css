@@ -1,37 +1,37 @@
 .quizContainer {
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  .categoryImage {
+}
+
+.categoryImage {
     max-width: 24%;
     border-radius: 20%;
     height: auto;
     position: absolute;
     top: 107px;
     left: 4px;
-  }
-  
-  .questionContainer {
+}
+
+.questionContainer {
     background-color: #f7f7f7;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     animation: questionAnimation 1s linear infinite;
-  }
-  
-  .questionText {
+}
+
+.questionText {
     font-size: 20px;
     margin-bottom: 10px;
-  }
-  
-  .option {
+}
+
+.option {
     display: block;
     margin-bottom: 10px;
-  }
-  
-  .nextButton {
+}
+
+.nextButton {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -40,13 +40,13 @@
     margin-top: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .nextButton:hover {
+}
+
+.nextButton:hover {
     background-color: #2E8B57;
-  }
-  
-  .hintButton {
+}
+
+.hintButton {
     background-color: #f44336;
     color: white;
     padding: 10px 20px;
@@ -57,50 +57,56 @@
     transition: background-color 0.3s ease;
     position: relative;
     left: 581px;
-    bottom: 156px;    
-  }
-  
-  .hintButton:hover {
+    bottom: 156px;
+}
+
+.hintButton:hover {
     background-color: #c62828;
-  }
-  
-  .hintText {
+}
+
+.hintText {
     font-style: italic;
     left: 200px;
     overflow: hidden;
     width: 200px;
-    left: 500px;
+    left: 400px;
     text-align: center;
-    padding: 0 10px ;
+    padding: 0 10px;
 
     bottom: 157px;
     background-color: rgba(255, 0, 0, 0.5);
     border-start-start-radius: 20%;
     border-end-end-radius: 30%;
     padding: 10px;
-    display: none;
+
     position: relative;
+    overflow: hidden;
 
 
-  }
-  .hintText:hover{
+
+}
+
+.hintText:hover {
     display: block;
-  }
-  .scoreModal {
+}
+
+.scoreModal {
     background-color: #f7f7f7;
-    padding: 20px;
+    padding: 10px;
     margin-top: 20px;
+    margin-left: 200px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 60%;
 
-  }
-  
-  .scoreText {
+}
+
+.scoreText {
     font-size: 20px;
     margin-bottom: 10px;
-  }
-  
-  .playAgainButton {
+}
+
+.playAgainButton {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -111,19 +117,19 @@
     transition: background-color 0.3s ease;
     text-decoration: none;
 
-  }
-  
-  .playAgainButton:hover {
+}
+
+.playAgainButton:hover {
     background-color: #2E8B57;
-  }
-  
-  .backButtonLink {
+}
+
+.backButtonLink {
     display: block;
     margin-top: 20px;
     text-align: center;
-  }
-  
-  .backButton {
+}
+
+.backButton {
     background-color: #f44336;
     color: white;
     padding: 10px 20px;
@@ -136,26 +142,47 @@
     left: 172px;
     bottom: 47px;
 
-  }
-  
-  .backButton:hover {
+}
+
+.backButton:hover {
     background-color: #c62828;
-  }
-  
-  .timeUpModal {
+}
+
+.timeUpModal {
     background-color: #f7f7f7;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 10px;
+    margin-top: -291px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .timeUpText {
+    width: 32%;
+    margin-left: 720px;
+    animation: _modal-appear_1v5pd_1 0.3s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@keyframes modal-appear {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.timeUpText {
     font-size: 20px;
     margin-bottom: 10px;
-  }
-  
-  .timerText {
+}
+
+.timerText {
     font-size: 20px;
     text-align: center;
     animation: timerAnimation 1s linear infinite;
@@ -166,54 +193,65 @@
     border-radius: 6%;
     z-index: 100;
     overflow: hidden;
-    position: absolute;
-    left: 86%;
-    bottom: 38%;
-  }
-  
+    position: relative;
+    left: 99%;
+    top: -288px;
+}
 
-  
 
-  
 
-  
-  @keyframes timerAnimation {
+
+
+
+
+@keyframes timerAnimation {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
+}
 
 
-  .cardWrap{
+.cardWrap {
     position: relative;
     left: 169px;
     max-width: 702px;
     width: 506px;
-  }
+}
 
-  .optionItem {
+.optionItem {
     list-style: none;
     margin: 0;
     padding: 0;
-  }
+}
 
 
-  .hintButton:hover + .hintText {
+.hintButton:hover+.hintText {
     display: block;
-  }
-  
-  .hintText {
-    display: none;
-  }  
+    overflow: hidden;
+}
 
-  .button_hint_Wrap{
-position: relative;
-bottom: 60px;
+.hintText {
+    display: none;
+}
+
+.button_hint_Wrap {
+    position: relative;
+    bottom: 60px;
     right: 145px;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
