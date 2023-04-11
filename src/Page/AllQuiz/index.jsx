@@ -60,10 +60,6 @@ const Quiz = () => {
     setTimeIsUp(false)
   }
 
-  const handelBack = () => {
-    nav('/')
-    dispatch(ClearData())
-  }
   const currentCategory = questionData?.[0]
 
   return (

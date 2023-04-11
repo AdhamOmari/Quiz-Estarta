@@ -3,8 +3,9 @@ import styles from './style.module.css'
 import logo from '../../assets/Logo_Quiz.avif'
 import { useSelector, useDispatch } from 'react-redux'
 import { setLanguage } from '../../redux/Action'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { ClearData } from '../../redux/Subject/subjectAction'
+import { RemoveData } from '../../redux/Score/ScoreAction'
 
 const Navbar = () => {
   const { language } = useSelector(state => state.languageReducer)
@@ -24,6 +25,7 @@ const Navbar = () => {
     console.log('datano')
     nav('/')
     dispatch(ClearData())
+    dispatch(RemoveData())
   }
   return (
     <nav className={styles.navbar}>
