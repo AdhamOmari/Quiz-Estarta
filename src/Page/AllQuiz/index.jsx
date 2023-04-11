@@ -16,6 +16,7 @@ const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [showScoreModal, setShowScoreModal] = useState(false)
   const [timeIsUp, setTimeIsUp] = useState(false)
+  const [timer, setTimer] = useState(Date.now() + 30000)
 
   const [hintVisible, setHintVisible] = useState(false)
 
@@ -55,6 +56,7 @@ const Quiz = () => {
     setCurrentQuestionIndex(0)
     setShowScoreModal(false)
     dispatch(RemoveData())
+    setTimer(Date.now() + 30000)
   }
 
   const currentCategory = questionData?.[0]
@@ -141,8 +143,9 @@ const Quiz = () => {
 
       {!showScoreModal && (
         <Countdown
-          date={Date.now() + 30000}
+          date={timer}
           onComplete={handleTimeUp}
+          onStop={handleTimeUp}
           renderer={({ seconds }) => (
             <p className={styles.timerText}>{seconds} 's</p>
           )}
@@ -153,7 +156,7 @@ const Quiz = () => {
           <p className={styles.timeUpText}>Time is up!</p>
           <p className={styles.scoreText}>Your Score: {score}</p>
           <button
-            onClick={handleStartAgainClick}
+            onClick={() => handleStartAgainClick()}
             className={styles.playAgainButton}
           >
             Play Again
